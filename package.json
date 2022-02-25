@@ -1,7 +1,7 @@
 {
-  "name": "namup-ke",
+  "name": "eyal-github-userpage",
   "version": "1.0.0",
-  "description": "National Missing and Unidentified Persons Kenya",
+  "description": "My GitHub Userpage",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
@@ -11,7 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
-  "author": "Larry Miami",
+  "author": "Eyal Douwma",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.1",
@@ -45,7 +45,7 @@
     "webpack-merge": "^5.2.0"
   },
   "dependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   }
 }
