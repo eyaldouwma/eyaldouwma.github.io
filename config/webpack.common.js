@@ -1,8 +1,11 @@
+/* eslint-disable no-undef */
 const paths = require("./paths");
+const path = require('path');
 
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebFontPlugin = require('webfont-webpack-plugin').default;
 
 module.exports = {
   // Where webpack looks to start building the bundle
@@ -15,8 +18,19 @@ module.exports = {
     publicPath: "/",
   },
 
+  resolve: {
+      extensions: ['.js', '.jsx'],
+  },
+
   // Customize the webpack build process
   plugins: [
+    // Generates Fonts from svg icons
+    new WebFontPlugin({
+        files: path.resolve('./src/Components/Icon/svg-icons/**/*.svg'),
+        dest: path.resolve('./src/Components/Icon/font'),
+        template: 'css',
+        fontName: 'icon-webfont',
+    }),
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
 
@@ -59,14 +73,24 @@ module.exports = {
             options: { sourceMap: true, importLoaders: 1 },
           },
           { loader: "sass-loader", options: { sourceMap: true } },
+          
         ],
+      },
+      {
+        loader: "url-loader",
+        test: /\.(svg|eot|ttf|woff|woff2)?$/
       },
 
       // Images: Copy image files to build folder
       { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: "asset/resource" },
 
-      // Fonts and SVGs: Inline files
-      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: "asset/inline" },
+      {
+          test: /\.(pdf)$/,
+          use: [{
+            loader: 'file-loader',
+            options: {name: '[name].[ext]'},
+          }],
+      }
     ],
   },
 };

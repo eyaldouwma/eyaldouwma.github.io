@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "icon-webfont";
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("./icon-webfont.eot");
+  src: url("./icon-webfont.eot?#iefix") format("embedded-opentype"), url("./icon-webfont.woff2") format("woff2"), url("./icon-webfont.woff") format("woff"), url("./icon-webfont.ttf") format("truetype"), url("./icon-webfont.svg#icon-webfont") format("svg");
+}
+
+.icon-webfont {
+  display: inline-block;
+  font-family: "icon-webfont";
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-webfont-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.icon-webfont-xs {
+  font-size: 0.75em;
+}
+
+.icon-webfont-sm {
+  font-size: 0.875em;
+}
+
+.icon-webfont-1x {
+  font-size: 1em;
+}
+
+.icon-webfont-2x {
+  font-size: 2em;
+}
+
+.icon-webfont-3x {
+  font-size: 3em;
+}
+
+.icon-webfont-4x {
+  font-size: 4em;
+}
+
+.icon-webfont-5x {
+  font-size: 5em;
+}
+
+.icon-webfont-6x {
+  font-size: 6em;
+}
+
+.icon-webfont-7x {
+  font-size: 7em;
+}
+
+.icon-webfont-8x {
+  font-size: 8em;
+}
+
+.icon-webfont-9x {
+  font-size: 9em;
+}
+
+.icon-webfont-10x {
+  font-size: 10em;
+}
+
+.icon-webfont-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.icon-webfont-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.icon-webfont-pull-left {
+  float: left;
+}
+
+.icon-webfont-pull-right {
+  float: right;
+}
+
+.icon-webfont.icon-webfont-pull-left {
+  margin-right: 0.3em;
+}
+
+.icon-webfont.icon-webfont-pull-right {
+  margin-left: 0.3em;
+}
+
+
+.icon-webfont-apachekafka::before {
+  content: "\ea01";
+}
+
+.icon-webfont-docker::before {
+  content: "\ea02";
+}
+
+.icon-webfont-facebook::before {
+  content: "\ea03";
+}
+
+.icon-webfont-googlecloud::before {
+  content: "\ea04";
+}
+
+.icon-webfont-helm::before {
+  content: "\ea05";
+}
+
+.icon-webfont-instagram::before {
+  content: "\ea06";
+}
+
+.icon-webfont-kubernetes::before {
+  content: "\ea07";
+}
+
+.icon-webfont-linkedin::before {
+  content: "\ea08";
+}
+
+.icon-webfont-nestjs::before {
+  content: "\ea09";
+}
+
+.icon-webfont-node-dot-js::before {
+  content: "\ea0a";
+}
+
+.icon-webfont-postgresql::before {
+  content: "\ea0b";
+}
+
+.icon-webfont-prometheus::before {
+  content: "\ea0c";
+}
+
+.icon-webfont-python::before {
+  content: "\ea0d";
+}
+
+.icon-webfont-react::before {
+  content: "\ea0e";
+}
+

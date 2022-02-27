@@ -1,0 +1,48 @@
+$dot-top-margin: 5px;
+$dot-dimension: 8px;
+
+.connected-dots {
+    color: #2f3542;
+
+    &__row {
+        display: flex;
+        min-height: 120px;
+
+        &__center {
+            position: relative;
+        }
+
+        &__link {
+
+            height: calc(100% - #{$dot-dimension});
+            width: 2px;
+            margin-left: calc(80px + (#{$dot-dimension} / 2) - 1px);
+            background-color: #f1f2f6;
+            position: absolute;
+        }
+
+        &__dot {
+            width: $dot-dimension;
+            height: $dot-dimension;
+            background-color: #2f3542;
+            border-radius: 100%;
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-top: $dot-top-margin;
+        }
+
+        &__left {
+            flex: 1;
+            display: flex;
+            align-items: end;
+            flex-direction: column;
+        }
+
+        &__right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+}
