@@ -1,0 +1,33 @@
+.skills-page {
+    display: flex;
+    flex-direction: column;
+
+    &__body {
+        background-color: #2f3542;
+    }
+
+    &__single-skill-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        & > span {
+            margin-top: 10px;
+            font-size: 16px;
+            color: white;
+        }
+    }
+
+    &__skills-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+}

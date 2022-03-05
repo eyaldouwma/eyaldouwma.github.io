@@ -1,0 +1,23 @@
+.education-page {
+    &__body {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        & > .connected-dots {
+            width: 840px;
+        }
+    }
+
+    &__years-container {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        & > span {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    }
+}
