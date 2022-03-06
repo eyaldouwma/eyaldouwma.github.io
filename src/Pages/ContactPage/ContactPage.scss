@@ -59,6 +59,10 @@
             transform: scale(0.98, 0.95);
         }
 
+        & > div {
+            margin-left: 10px;
+        }
+
         &-disabled {
             cursor: not-allowed;
             opacity: 0.1;

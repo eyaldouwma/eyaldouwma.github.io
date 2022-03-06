@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import SectionHeader from '../../Components/SectionHeader/SectionHeader';
 import { toast, } from 'react-toastify';
 import emailjs from '@emailjs/browser';
+import { TailSpin } from 'react-loader-spinner';
 
 import './ContactPage.scss';
 import classNames from 'classnames';
@@ -115,6 +116,7 @@ const ContactPage = ({scrollRef}) => {
                     </div>
                     <div className={submitClassNames} onClick={handleSubmit}>
                         Submit
+                        {isSubmitting && <TailSpin height='30' width='30' color='#C0C0C0'/>}
                     </div>
                 </div>
             </div>

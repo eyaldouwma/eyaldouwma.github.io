@@ -62,6 +62,7 @@
     "object-hash": "^3.0.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-loader-spinner": "^6.0.0-0",
     "react-toastify": "^8.2.0"
   }
 }
