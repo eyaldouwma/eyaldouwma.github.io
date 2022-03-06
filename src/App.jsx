@@ -16,8 +16,8 @@ const App = () => {
     const skillsRef = useRef(null);
     const contactRef = useRef(null);
 
-    const refScrollIntoView = (ref) => {
-        return () => ref.current.scrollIntoView({behavior: 'smooth', block: 'center'})
+    const refScrollIntoView = (ref, block = 'center') => {
+        return () => ref.current.scrollIntoView({behavior: 'smooth', block: block})
     };
 
     const headerItems = useMemo(() => {
@@ -44,7 +44,7 @@ const App = () => {
     return (
       <div className="app-container" ref={topRef}>
           <Header 
-            titleClick={() => topRef.current.scrollIntoView({behavior:'smooth'})}
+            titleClick={refScrollIntoView(topRef, 'start')}
             items={headerItems}
           />
           <ResumePage />
