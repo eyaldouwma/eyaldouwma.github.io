@@ -43,16 +43,16 @@ const App = () => {
 
     return (
       <div className="app-container" ref={topRef}>
-          <Header 
-            titleClick={refScrollIntoView(topRef, 'start')}
-            items={headerItems}
-          />
-          <ResumePage />
-          <ExperiencePage scrollRef={experienceRef}/>
-          <EducationPage scrollRef={educationRef}/>
-          <SkillsPage scrollRef={skillsRef}/>
-          <ContactPage scrollRef={contactRef}/>
-          <DownloadCVButton />
+        <Header 
+        titleClick={refScrollIntoView(topRef, 'start')}
+        items={headerItems}
+        />
+        <ResumePage />
+        <ExperiencePage scrollRef={experienceRef}/>
+        <EducationPage scrollRef={educationRef}/>
+        <SkillsPage scrollRef={skillsRef}/>
+        <ContactPage scrollRef={contactRef}/>
+        <DownloadCVButton />
       </div>
     );
 }
