@@ -52,6 +52,10 @@ const ContactPage = ({scrollRef}) => {
                         type: 'success',
 
                     })
+                    setEmail('');
+                    setFirstName('');
+                    setLastName('');
+                    setMessage('');
                 } catch {
                     toast('Oh no! An Error occurred', {
                         ...commonToastProperties,
