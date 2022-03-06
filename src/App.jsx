@@ -6,8 +6,10 @@ import EducationPage from "./Pages/EducationPage/EducationPage";
 import SkillsPage from "./Pages/SkillsPage/SkillsPage";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import DownloadCVButton from "./Containers/DownloadCVButton/DownloadCVButton";
+import { ToastContainer } from 'react-toastify';
 
 import "./app.styles.scss";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
     const topRef = useRef(null);
@@ -52,6 +54,7 @@ const App = () => {
         <EducationPage scrollRef={educationRef}/>
         <SkillsPage scrollRef={skillsRef}/>
         <ContactPage scrollRef={contactRef}/>
+        <ToastContainer />
         <DownloadCVButton />
       </div>
     );

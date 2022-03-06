@@ -2,10 +2,12 @@
 const paths = require("./paths");
 const path = require('path');
 
+const { DefinePlugin } = require('webpack');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebFontPlugin = require('webfont-webpack-plugin').default;
+const dotenv = require('dotenv');
 
 module.exports = {
   // Where webpack looks to start building the bundle
@@ -31,6 +33,9 @@ module.exports = {
         template: 'css',
         fontName: 'icon-webfont',
     }),
+    new DefinePlugin({
+        'process.env': JSON.stringify(dotenv.config().parsed)
+    }),
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
 
@@ -46,7 +51,6 @@ module.exports = {
         },
       ],
     }),
-
     // Generates an HTML file from a template
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({

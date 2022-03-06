@@ -55,7 +55,16 @@
         opacity: 1;
         transition: opacity 0.2s ease;
 
-        &:hover {
+        &:active {
+            transform: scale(0.98, 0.95);
+        }
+
+        &-disabled {
+            cursor: not-allowed;
+            opacity: 0.1;
+        }
+
+        &:hover:not(.contact-page__form-submit-btn-disabled) {
             opacity: 0.7;
         }
     }
@@ -67,6 +76,22 @@
 
         &:first-child {
             margin-top: 0px;
+        }
+    }
+
+    .error {
+        & > label {
+            & > span {
+                margin-top: 5px;
+                font-size: 13px;
+                color: #A62122;
+                font-weight: 600;
+            }
+
+            & > input {
+                border-color: #A62122;
+                border-width: 2px;
+            }
         }
     }
 }
